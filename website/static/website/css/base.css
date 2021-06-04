@@ -1,13 +1,284 @@
 /* base.css */
-
+/*
 footer {
    position: fixed;
    bottom: 30px;
    width: 100%;
    text-align: center;
 }
-
 body > article {
     max-width: 800px;
     margin: auto;
 }
+ */
+/* FORMATACAO */
+* {
+  box-sizing: border-box;
+}
+#bg {
+  background-repeat: no-repeat;
+
+}
+body{
+
+  font-family: 'Akaya Telivigala', serif;
+  font-size: 17px;
+  background-image:url('../img/background-site-pic.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+
+
+
+header {
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+}
+
+
+nav {
+  font-size: 30px;
+  padding: 5px;
+}
+
+main{
+  padding: 10px;
+  color: rgb(0, 0, 0);
+}
+
+#tabela{
+  color: white;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  text-align: center;
+}
+
+
+hr.separador {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+
+aside{
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color:rgb(5, 110, 31);
+}
+
+.flexbox {
+    display: flex;
+    height: 220px;
+    justify-content:left;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.flexbox > div {
+
+  margin: 10px;
+  padding: 10px;
+}
+/*------------------------------------------------------------------------------------------------------*/
+
+
+/*Input details & details*/
+
+input[type=text] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+input[type=email] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+/*barra dos clubes*/
+#menuSticky {
+  text-align: center;
+  position:-webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+/*--------------------*/
+
+#titulo_site{
+  text-align: center;
+  font-size: 60px;
+}
+
+#intro{
+    font-size: 25px;
+}
+
+
+a:visited{color: rgb(19, 19, 161)}
+a:hover{color: yellow}
+a:active{color: red}
+/*------------------------------------------*/
+
+/*FORMATACAO DA BARRA DE PESQUISA---------------------*/
+/*para a barra continuar ate ao fim*/
+.topnav {
+  overflow: hidden;
+
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+
+  color:black
+}
+
+#left1{
+  float: left;
+  color: #0c0b0b;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 25px;
+}
+
+#right1{
+  float: right;
+  color: #0c0b0b;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 25px;
+}
+/*---------------------------------------------*/
+
+/*SLIDE EFFECT*/
+
+.ligas {
+  position: relative;
+  width: 50%;
+}
+
+.imageLeague {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background-color: #2f30307a;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.ligas:hover .overlay {
+
+    width: 50%;
+
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+/*------------------------------------------------------*/
+
+
+/*wordcloud + keyframe*/
+
+@keyframes wordcloud {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:500px; top:0px;}
+  50%  {background-color:blue; left:500px; top:380px;}
+  75%  {background-color:green; left:0px; top:380px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+.wordcloudEffect {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: wordcloud;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+
+.wordcloudPad{
+  text-align: right;
+
+}
+
+
+#backgEffect {
+  border-radius: 25px;
+  background: url(../img/wordcloud.png);
+  padding: 20px;
+  width: 640px;
+  height: 444px;
+}
+
+/*-----------------------------------------------*/
+
+
+/*INFO ANIMACOES*/
+
+
+
+
+@keyframes glowing {
+  0% {
+    background-color: #0a6dee;
+    box-shadow: 0 0 5px #000000;
+  }
+  50% {
+    background-color: #df0707;
+    box-shadow: 0 0 20px #000000;
+  }
+  100% {
+    background-color: #0e7c0b;
+    box-shadow: 0 0 5px #000000;
+  }
+}
+
+
+/*------------------------------------------------*//*------------------------------------------------*/

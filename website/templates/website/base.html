@@ -1,33 +1,57 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
-        <title>Title</title>
-    </head>
-    <body>
-        <header class="jumbotron text-center">
-            <h1>Programação Web - Laboratório 6: primeira web app django</h1>
-            <p>Neste laboratório criará uma primeira aplicação django simples, para se familiarizar com os conceitos de urls, views, templates e sua linguagem.</p>
-            <nav>
-                <a href="{% url 'website:home' %}" class="btn btn-info">Home</a>
-                <a href="{% url 'website:details' 1 %}" class="btn btn-info">Details</a>
-                <a href="{% url 'website:contacts' %}" class="btn btn-info">Contacts</a>
-            </nav>
-        </header>
-        <article class="container">
-            <main class="col-sm-6">
-                {% block main %}
-	            {% endblock main %}
-            </main>
-            <aside class="col-sm-6">
-                <img src="{% static 'website/images/logo_ulht.png' %}">
-            </aside>
-        </article>
-        <footer>
-            Bem vindo à Universidade Lusófona - Programação Web
-        </footer>
-    </body>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anonimo1 & Anonimo2">
+    <meta name="keywords" content="soccerNET">
+    <meta name="description" content="Website sobre futebol">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'website/img/soccer_site.ico' %}" type="image/x-icon">
+    <link rel='stylesheet' href="{% static 'website/css/font.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Soccer Net</title>
+
+    {% block style_head %}
+    {% endblock style_head %}
+
+</head>
+<body>
+
+<header>
+
+    {% block nome %}
+    {% endblock nome %}
+
+    <hr class="separador">
+    <nav class="topnav">
+
+        <a id="left1" href="{% url 'website:index' %}">Página Inicial</a>
+        <a id="right1" href="{% url 'website:info' %}">Contactos</a>
+        <a id="right1" href="{% url 'website:critica' %}">Opinião</a>
+        <a id="left1" href="{% url 'website:wordcloud' %}">Wordcloud</a>
+        <a id="left1" href="{% url 'website:link' %}">Links</a>
+        <a id="right1" href="{% url 'website:about' %}">Sobre o Website</a>
+    </nav>
+</header>
+<hr class="separador">
+
+{% block nav_teams %}
+{% endblock nav_teams %}
+
+<main>
+    {% block main %}
+    {% endblock main %}
+</main>
+
+
+<footer>
+    <p>Anonimo1 & Anonimo2</p>
+</footer>
+</body>
 </html>
