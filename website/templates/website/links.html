@@ -1,0 +1,90 @@
+{% extends 'website/base.html' %}
+
+
+{% block style_head %}
+
+
+    <style>
+        th {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            color: rgba(0, 0, 0, 0.856);
+        }
+
+        table, td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            color: rgba(243, 243, 243, 0.856);
+        }
+
+        th, td {
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+{% endblock style_head %}
+
+{% block nome %}
+
+    <h1 id="titulo_site">Links e referências</h1>
+
+{% endblock nome %}
+
+
+{% block main %}
+    <h2>Algumas informações usadas na construção do Soccer Net:</h2>
+    <section>
+        <table>
+            <thead>
+            <tr>
+                <th>Carateristicas</th>
+                <th>Elementos/técnicas</th>
+                <th>Links</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Layouts</td>
+                <td>Usou-se o CSS grid e CSS flexbox para construção de layouts</td>
+                <td><a href="https://www.w3schools.com/html/html_layout.asp">[1]</a></td>
+            </tr>
+            <tr>
+                <td>Responsividade</td>
+                <td>Foram usadas media queries que adaptam o layout para telemovel e PC consoante o tamanho da janela do
+                    browser.
+                </td>
+                <td><a href="https://www.w3schools.com/html/html_responsive.asp">[2]</a></td>
+            </tr>
+            <tr>
+                <td>Seletores</td>
+                <td>Foram usados seletores para selecionar certos elementos da nossa página, para depois seja mais fácil
+                    mexer nesses elementos
+                </td>
+                <td><a href="https://www.w3schools.com/css/css_selectors.asp">[3]</a></td>
+            </tr>
+            <tr>
+                <td>Etiquetas</td>
+                <td>HTML5 main, header, article, footer, figure, usamos para organizar o codigo</td>
+                <td><a href="https://www.textbroker.pt/tutorial-etiquetas-html">[4]</a></td>
+            </tr>
+            <tr>
+                <td>Animações</td>
+                <td>Foram feitas animações usando keyframes que permitiram usar o efecto glowing entre outros</td>
+                <td><a href="https://www.w3schools.com/css/css3_animations.asp">[5]</a></td>
+            </tr>
+            <tr>
+                <td>Tabelas</td>
+                <td>Foram feitas tabelas para organizar certas estatisticas(os titulos ganhos por cada clube)</td>
+                <td><a href="https://www.w3schools.com/html/html_tables.asp">[7]</a></td>
+            </tr>
+            <tr>
+                <td>Formulário</td>
+                <td>Formulário para obtermos informações através de inputs</td>
+                <td><a href="https://www.w3schools.com/html/html_forms.asp">[8]</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+{% endblock %}

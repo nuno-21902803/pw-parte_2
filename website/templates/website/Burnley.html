@@ -1,0 +1,67 @@
+
+  {% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+            <h1 id="titulo_site">Burnley Football Club 🍷</h1>
+{% endblock nome %}
+
+{% block main %}
+        <h2>Sobre o Burnley:</h2> 
+        <p id="intro"style="color: white;">O Burnley Football Club, apelidado de The Clarets (🍷) devido a cor de sua camisa, é um clube de futebol profissional situado na cidade de Burnley, no leste do condado de Lancashire, Inglaterra.
+
+            O Burnley foi um dos 12 fundadores da Football League, em 1888.</p>
+    <section>
+        <div>     
+            <p style="color: rgb(0, 0, 0);">Turf Moor</p>
+            <a> {% load static %} <img src="{% static "website/img/burnley-stadium.png" %}" alt="burnley-stadium" style="width:800px; height:400px"></a>
+        </div>
+        
+    </section>
+    <section id="titulos">
+    <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+              border: 1px solid rgb(255, 255, 255);
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+            </style>
+            <table>
+                <thead>
+                  <tr>
+                    <th colspan ="1">Competições</th>
+                    <th colspan ="1" rowspan = "3">Títulos</th>
+               
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>UEFA Champions League</td>
+                    <td> 0x</td>
+                  </tr>
+                  <tr>
+                    <td>UEFA Europa League</td>
+                    <td> 0x</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                  <td>Premier League</td>
+                  <td>2x</td>
+                  </tr>
+            
+                  <tr>
+                    <td>FA Cup</td>
+                    <td>1x</td>
+             
+                 
+               
+                </tfoot>
+              </table>
+              
+    </section>
+   {% endblock main %}

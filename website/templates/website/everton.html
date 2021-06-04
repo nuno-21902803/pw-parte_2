@@ -1,0 +1,69 @@
+
+  {% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+            <h1 id="titulo_site">Everton Football Club 🧑‍🤝‍🧑</h1>
+
+{% endblock nome %}
+
+{% block main %}
+        <h2>Sobre o Everton:</h2> 
+        <p id="intro"style="color: white;">O Everton Football Club é um clube de futebol fundado no bairro homônimo da cidade de Liverpool, Noroeste da Inglaterra. Atualmente, a sede da instituição fica na área de Walton, também em Liverpool.
+
+            O Everton compete pela Premier League, um dos seis clubes que disputaram todas as suas edições, e é também o clube com maior número de participações na primeira divisão da Inglaterra. O Everton é conhecido por vários nomes:os blues, the toffees, mas é conhecido por ser, The People's Club(🧑‍🤝‍🧑)</p>
+    <section>
+        <div>     
+            <p style="color: rgb(0, 0, 0);">Goodison Park</p>
+            <a> {% load static %} <img src="{% static "website/img/everton-stadium.png" %}" alt="everton-stadium" style="width:800px; height:400px"></a>
+
+        </div>
+        
+    </section>
+    <section id="titulos">
+    <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+              border: 1px solid rgb(255, 255, 255);
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+            </style>
+            <table>
+                <thead>
+                  <tr>
+                    <th colspan ="1">Competições</th>
+                    <th colspan ="1" rowspan = "3">Títulos</th>
+               
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>UEFA Champions League</td>
+                    <td> 0x</td>
+                  </tr>
+                  <tr>
+                    <td>UEFA Europa League</td>
+                    <td> 0x</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                  <td>Premier League</td>
+                  <td>9x</td>
+                  </tr>
+            
+                  <tr>
+                    <td>FA Cup</td>
+                    <td>6x</td>
+             
+                 
+               
+                </tfoot>
+              </table>
+              
+    </section>
+{% endblock main %}

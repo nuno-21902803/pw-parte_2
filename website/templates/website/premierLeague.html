@@ -1,0 +1,201 @@
+{% extends 'website/base.html' %}
+
+
+{% block nome %}
+    <h1 id="titulo_site">Soccer Net</h1>
+{% endblock nome %}
+
+{% block main %}
+    <h2>Premier League</h2>
+    <p id="intro">Premier League é uma liga profissional de futebol da Inglaterra e está no topo do sistema de ligas do
+        futebol inglês, sendo a principal competição de futebol do país. Foi fundada em 1992.</p>
+
+    <div class="flexbox">
+        <div>
+
+            <a href="{% url 'website:manUnited' %}"> {% load static %} <img
+                    src="{% static "website/img/manunited.png" %}" alt="man-united"
+                    style="width:150px; height:150px"></a>
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:manCity' %}">{% load static %} <img src="{% static "website/img/mancity.png" %}"
+                                                                         alt="man-city"
+                                                                         style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:spurs' %}"> {% load static %} <img src="{% static "website/img/spurs.png" %}"
+                                                                        alt="spurs"
+                                                                        style="width:150px; height:150px"></a>
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:newcastle' %}"> {% load static %} <img
+                    src="{% static "website/img/newcastle.png" %}" alt="newcastle"
+                    style="width:150px; height:150px"></a>
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:liverpool' %}"> {% load static %} <img
+                    src="{% static "website/img/liverpool.png" %}" alt="liverpool"
+                    style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:leicester' %}"> {% load static %} <img
+                    src="{% static "website/img/leicester.png" %}" alt="leicester"
+                    style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:crystalPalace' %}"> {% load static %} <img
+                    src="{% static "website/img/crystal-palace.png" %}" alt="crystal-palace"
+                    style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:westHam' %}"> {% load static %} <img src="{% static "website/img/west-ham.png" %}"
+                                                                          alt="west-ham"
+                                                                          style="width:150px; height:150px"></a>
+
+
+        </div>
+
+
+        <div>
+
+            <a href="{% url 'website:chelsea' %}"> {% load static %} <img src="{% static "website/img/chelsea.png" %}"
+                                                                          alt="chelsea"
+                                                                          style="width:150px; height:150px"></a>
+
+        </div>
+    </div>
+    <div class="flexbox">
+        <div>
+
+            <a href="{% url 'website:everton' %}"> {% load static %} <img src="{% static "website/img/everton.png" %}"
+                                                                          alt="everton"
+                                                                          style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:astonVilla' %}"> {% load static %} <img
+                    src="{% static "website/img/aston-villa.png" %}" alt="aston-villa"
+                    style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:arsenal' %}"> {% load static %} <img src="{% static "website/img/arsenal.png" %}"
+                                                                          alt="arsenal"
+                                                                          style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:leeds' %}"> {% load static %} <img src="{% static "website/img/leeds.png" %}"
+                                                                        alt="leeds"
+                                                                        style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:southampton' %}"> {% load static %} <img
+                    src="{% static "website/img/southampton.png" %}" alt="southampton"
+                    style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:sheffield' %}"> {% load static %} <img
+                    src="{% static "website/img/sheffield.png" %}" alt="sheffield"
+                    style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:burnley' %}"> {% load static %} <img src="{% static "website/img/burnley.png" %}"
+                                                                          alt="burnley"
+                                                                          style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:wolves' %}"> {% load static %} <img src="{% static "website/img/wolves.png" %}"
+                                                                         alt="wolves" style="width:150px; height:150px"></a>
+
+
+        </div>
+
+
+        <div>
+
+            <a href="{% url 'website:brighton' %}"> {% load static %} <img src="{% static "website/img/brighton.png" %}"
+                                                                           alt="brighton"
+                                                                           style="width:150px; height:150px"></a>
+
+        </div>
+    </div>
+    <div class="flexbox">
+        <div>
+
+            <a href="{% url 'website:westBromwich' %}"> {% load static %} <img
+                    src="{% static "website/img/west-brom.png" %}" alt="westBrom" style="width:150px; height:150px"></a>
+
+
+        </div>
+
+        <div>
+
+            <a href="{% url 'website:fulham' %}"> {% load static %} <img src="{% static "website/img/fullham.png" %}"
+                                                                         alt="fullham"
+                                                                         style="width:150px; height:150px"></a>
+
+
+        </div>
+
+
+    </div>
+
+    <section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4Dk7eYoj5GI" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </section>
+
+{% endblock main %}

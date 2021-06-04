@@ -1,0 +1,73 @@
+{% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+    <h1 id="titulo_site">Manchester City 🧍</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <h2>Sobre o Manchester City:</h2>
+    <p id="intro" style="color: white;">Manchester City Football Club é um clube de futebol inglês, que disputa a
+        Premier League, tendo sido fundado em 1880. Foi então nomeado FC St. Mark's (West Gorton) tornando-se
+        posteriormente Ardwick Association Football Club,
+        e finalmente no dia 16 de abril de 1894, se tornou o Manchester City Football Club, tendo sua sede em
+        Manchester, no Noroeste da Inglaterra. Também é conhecido como Manchester City ou simplesmente City, onde os
+        adeptos do city são conhecidos por citizens(🧍)
+        .É considerado um dos principais clubes da atualidade. O City é um dos clubes mais antigos e tradicionais da
+        Inglaterra, </p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);">Ethiad-Stadium</p>
+            <a> {% load static %} <img src="{% static "website/img/ethiad-stadium.png" %}" alt="ethiad-stadium"
+                                       style="width:800px; height:400px"></a>
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 0x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 0x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Premier League</td>
+                <td>6x</td>
+            </tr>
+
+            <tr>
+                <td>FA Cup</td>
+                <td>6x</td>
+
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}

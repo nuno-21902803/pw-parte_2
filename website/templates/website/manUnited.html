@@ -1,0 +1,75 @@
+{% extends 'website/base_premiere.html' %}
+
+
+{% block nome %}
+    <h1 id="titulo_site">Manchester United 😈</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <h2>Sobre o Manchester United:</h2>
+    <p id="intro" style="color: white;">O Manchester United Football Club é um clube inglês, sediado em Trafford (na
+        região metropolitana de Manchester) sendo um dos times mais populares e mais bem sucedidos de sempre da
+        Inglaterra e do mundo. Manchester United é o clube de maior sucesso na Inglaterra, tendo ganho 38 títulos
+        importantes ao comando considerados por alguns o melhor treinador a atuar na premier league, os adeptos do
+        manchester united são conhecidos por red devils(diabos vermelhos 😈). O estádio do manchester é o old
+        trafford</p>
+    <section>
+        <div>
+            <p>Old Trafford</p>
+
+            <a> {% load static %} <img src="{% static "website/img/old-trafford.png" %}" alt="old-trafford"
+                                       style="width:800px; height:400px"></a>
+
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 2x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 1x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Premier League</td>
+                <td>20x</td>
+            </tr>
+
+            <tr>
+                <td>FA Cup</td>
+                <td>12x</td>
+
+
+            </tfoot>
+        </table>
+
+    </section>
+
+{% endblock main %}

@@ -1,0 +1,40 @@
+{% extends 'website/base.html' %}
+
+        {% block nome %}
+            <h1 id="titulo_site">Soccer Net</h1>
+        {% endblock nome %}
+
+{% block main %}
+
+    <h2>Sobre o nosso site</h2>
+    <p id="intro">Seja bem vindo.Este site tem como objetivo providenciar informações sobre algumas ligas do desporto
+        rei, <b>o Futebol</b>.
+        Para saber mais sobre as ligas, veja a lista abaixo. Se tiver alguma dúvida ou queira simplesmente fazer critica
+        visite a página contactos
+        ou <a href="{% url 'website:info' %}">clique aqui.</a></p>
+
+    <section>
+        <div class="flexbox">
+
+            <div class="ligas">
+                <a href="{% url 'website:ligaEscocesa' %}">  {% load static %} <img
+                        src="{% static "website/img/scottish-premiership.png" %}" alt="ligaEscocesa"
+                        style="width:300px; height:200px"/> </a>
+                <div class="overlay">
+                    <div class="text">Scottish Premier League</div>
+                </div>
+
+            </div>
+
+            <div class="ligas">
+                <a href="{% url 'website:PremierLeague' %}"> {% load static %} <img
+                        src="{% static "website/img/premier-league.png" %}" alt="PremierLeague"
+                        style="width:300px; height:200px"/> </a>
+                <div class="overlay">
+                        <div class="text">Premier League</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock main %}

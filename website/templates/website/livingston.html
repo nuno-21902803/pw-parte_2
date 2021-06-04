@@ -1,0 +1,76 @@
+{% extends 'website/base_scottish.html' %}
+
+
+{% block nome %}
+    <h1 id="titulo_site">Livingston FC 🦁 </h1>
+{% endblock nome %}
+
+
+{% block main %}
+    <h2>Sobre o Livingston:</h2>
+    <p id="intro" style="color: white;">Livingston Football Club, ou então The lions(🦁), é um clube de futebol da
+        Escócia fundado em 1943.
+
+
+    </p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);">Almondvale Stadium</p>
+            <a> {% load static %} <img src="{% static "website/img/livingston-stadium.png" %}" alt="livingston-stadium"
+                                       style="width:800px; height:400px"></a>
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 0x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 0x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+
+            <tr>
+                <td>Scottish Premier League</td>
+                <td>0x</td>
+            </tr>
+
+            <tr>
+                <td>Scottish Cup</td>
+                <td>0x</td>
+
+            <tr>
+                <td>Scottish League Cup</td>
+                <td> 1x</td>
+            </tr>
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}

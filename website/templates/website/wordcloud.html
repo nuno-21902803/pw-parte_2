@@ -1,0 +1,40 @@
+{% extends 'website/base.html' %}
+
+{% block nome %}
+            <h1 id="titulo_site">Wordcloud</h1>
+{% endblock nome %}
+
+
+{% block main %}
+    <h2>Wordcloud</h2>
+
+    <div class="flexbox">
+
+        <figure class="wordcloudPad">
+            <p>Wordcloud Interativo</p>
+            {% load static %}
+            <img src="{% static "website/img/wordcloud.png" %}" width="640" height="444" usemap="#Menumap" id="backgEffect"
+                 alt="Img_Interactivo">
+        </figure>
+
+
+        <section>
+            {% load static %}
+            <img src="{% static "website/img/wordcloud.png" %}" width="640" height="444" usemap="#Menumap"
+                 class="wordcloudEffect" id="backgEffect">
+
+        </section>
+
+    </div>
+
+    <map name="Menumap">
+
+        <area shape="rect" coords="266,41,360,90" href="{% url 'website:link' %}" alt="link">
+        <area shape="rect" coords="254,112,403,155" href="{% url 'website:critica' %}" alt="Opinião">
+        <area shape="rect" coords="320,156,473,184" href="{% url 'website:PremierLeague' %}" alt="Premier League">
+        <area shape="rect" coords="234,195,420,232  " href="{% url 'website:info' %}" alt="Contactos">
+        <area shape="rect" coords="180,270,472,316  " href="{% url 'website:index' %}" alt="Pagina Inicial">
+        <area shape="rect" coords="70,350,554,395  " href="{% url 'website:ligaEscocesa' %}"
+              alt="Scottish Premier League">
+    </map>
+{% endblock main %}

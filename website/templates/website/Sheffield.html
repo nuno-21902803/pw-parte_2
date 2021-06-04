@@ -1,0 +1,70 @@
+{% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+    <h1 id="titulo_site">Sheffield United Football Club ⚔️</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <h2>Sobre o Sheffield:</h2>
+    <p id="intro" style="color: white;">O Sheffield United é um tradicional clube de futebol da Inglaterra, fundado em
+        1889.
+
+        Com sede na cidade de Sheffield, o clube de futebol foi formado através de um ramo do Sheffield United Cricket
+        Club e é apelidado de The Blades(⚔️), devido à história da sua cidade com a produção de aço.</p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);">Bramall Lane</p>
+            <a> {% load static %} <img src="{% static "website/img/Bramall Lane.png" %}" alt="shefield-stadium"
+                                       style="width:800px; height:400px"></a>
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 0x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 0x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Premier League</td>
+                <td>1x</td>
+            </tr>
+
+            <tr>
+                <td>FA Cup</td>
+                <td>4x</td>
+
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}

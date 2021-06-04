@@ -1,0 +1,68 @@
+{% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+    <h1 id="titulo_site">Chelsea Football Club 🔵</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <h2>Sobre o Chelsea:</h2>
+    <p id="intro" style="color: white;">O Chelsea Football Club é um dos maiores clubes do futebol inglês, sediado na
+        cidade de Londres, fundado em 10 de março de 1905. Neste clube os adeptos são conhecidos como: os blues(🔵)</p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);">Stamford Bridge</p>
+            <a> {% load static %} <img src="{% static "website/img/chelsea-stadium.png" %}" alt="chelsea-stadium"
+                                       style="width:800px; height:400px"></a>
+
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 1x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 2x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Premier League</td>
+                <td>6x</td>
+            </tr>
+
+            <tr>
+                <td>FA Cup</td>
+                <td>8x</td>
+
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}

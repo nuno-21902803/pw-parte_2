@@ -1,0 +1,117 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block style_head %}
+
+    <style>
+        th {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            color: rgba(0, 0, 0, 0.856);
+        }
+
+        table, td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            color: rgba(243, 243, 243, 0.856);
+        }
+
+        th, td {
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+
+
+
+{% endblock style_head %}
+
+
+{% block nome %}
+
+    <h1 id="titulo_site">About Us</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <section>
+        <h3>Algumas técnicas usadas:</h3>
+        <p>Se tiver curiosidade como pode fazer visite a página Links ou <a href="{% url 'website:link' %}">ou clique
+            aqui</a> para
+            ter acesso a páginas que o vão ajudar.</p>
+
+    </section>
+
+
+    <aside>
+        <h3>Video sobre o Website</h3>
+        <iframe width="540" height="315" src="https://www.youtube.com/embed/WynidQ_2lKI" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+
+    </aside>
+    <section>
+        <table>
+            <thead>
+            <tr>
+                <th>Carateristicas</th>
+                <th>Elementos/técnicas</th>
+                <th>Links</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Layouts</td>
+                <td>Usou-se o CSS grid e CSS flexbox para construção de layouts</td>
+                <td>Na construção de cada página</td>
+            </tr>
+            <tr>
+                <td>Responsividade</td>
+                <td>Foram usadas media queries que adaptam o layout para telemovel e PC consoante o tamanho da janela do
+                    browser.
+                </td>
+                <td>Por exemplo initial-scale e device-width</td>
+            </tr>
+            <tr>
+                <td>Seletores</td>
+                <td>Foram usados seletores para selecionar certos elementos como : ".", "#", etc...</td>
+                <td>Para identificarmos diferentes elementos e fazer estilos com os mesmos de forma organizada.</td>
+            </tr>
+            <tr>
+                <td>Etiquetas</td>
+                <td>HTML5 main, header, article, footer, figure, etc...</td>
+                <td>Na organização dos diferentes elementos</td>
+            </tr>
+            <tr>
+                <td>Animações</td>
+                <td>Foram feitas animações usando keyframes</td>
+                <td>Permitiram usar o efecto glowing entre outros</td>
+            </tr>
+            <tr>
+                <td>Tabelas</td>
+                <td>Uso de tabelas</td>
+                <td>Foram feitas tabelas para organizar certas estatisticas</td>
+            </tr>
+            <tr>
+                <td>Formulário</td>
+                <td>Formulários e inputs</td>
+                <td>Formulário para obtermos informações através de inputs com action de POST</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br>
+    <section>
+
+        <figure>
+            <a><img src="{% static "website/img/mapaWeb.png" %}" style="width:850px; height:650px" alt=""/>
+                Veja aqui o Mapa do Website </a>
+        </figure>
+
+
+    </section>
+
+{% endblock main %}

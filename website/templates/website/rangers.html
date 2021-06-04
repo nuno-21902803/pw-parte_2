@@ -1,0 +1,81 @@
+{% extends 'website/base_scottish.html' %}
+
+
+{% block nome %}
+    <h1 id="titulo_site">Rangers Football Club 🧸 </h1>
+{% endblock nome %}
+
+
+{% block main %}
+
+    <h2>Sobre o Rangers:</h2>
+    <p id="intro" style="color: white;">Rangers Football Club é um clube de futebol em Glasgow, na Escócia conhecidos
+        como The Teddy Bears(🧸), que joga na Premier League escocesa, o primeiro nível da Scottish Premier League. O
+        seu terreno de origem, Ibrox Stadium, está no sudoeste da cidade.
+
+        Os Rangers ganharam mais títulos e triplos de campeonato do que qualquer outro clube do mundo, ganhando o
+        Campeonato Escocês 55 vezes, a Copa da Escócia 33 vezes, e a Copa da Liga Escocesa 27 vezes
+
+
+    </p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);"> Ibrox Stadium</p>
+            <a> {% load static %} <img src="{% static "website/img/rangers-stadium.png" %}" alt="rangers-stadium"
+                                       style="width:800px; height:400px"></a>
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 0x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 0x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+
+            <tr>
+                <td>Scottish Premier League</td>
+                <td>55x</td>
+            </tr>
+
+            <tr>
+                <td>Scottish Cup</td>
+                <td>33x</td>
+
+            <tr>
+                <td>Scottish League Cup</td>
+                <td> 27x</td>
+            </tr>
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}

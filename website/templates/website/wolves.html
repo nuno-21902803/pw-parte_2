@@ -1,0 +1,68 @@
+{% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+    <h1 id="titulo_site">Wolverhampton Wanderers Football Club 🐺</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <h2>Sobre o Wolverhampton :</h2>
+    <p id="intro" style="color: white;">O Wolverhampton Wanderers Football Club é um clube de futebol inglês sediado na
+        cidade de Wolverhampton, no estádio Molineux Stadium, que também é conhecido pela sua alcunha, Wolves(🐺).</p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);">Molineux Stadium</p>
+
+            {% load static %} <img src="{% static "website/img/wolves-stadiun.png" %}" alt="wolves-stadiun"
+                                   style="width:800px; height:400px">
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 0x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 0x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Premier League</td>
+                <td>3x</td>
+            </tr>
+
+            <tr>
+                <td>FA Cup</td>
+                <td>4x</td>
+
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}

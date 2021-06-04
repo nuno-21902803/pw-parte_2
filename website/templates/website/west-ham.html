@@ -1,0 +1,74 @@
+{% extends 'website/base_premiere.html' %}
+
+{% block nome %}
+    <h1 id="titulo_site">West Ham United Football Club 🔨</h1>
+
+{% endblock nome %}
+
+{% block main %}
+    <h2>Sobre o West Ham:</h2>
+    <p id="intro" style="color: white;">O West Ham United Football Club é um clube de futebol inglês baseado em East
+        End, na região leste de Londres.
+
+        O West Ham é um dos clubes mais tradicionais da Inglaterra e de todo Reino Unido, sendo um dos 20 que já
+        disputaram por pelo menos 60 temporadas o Campeonato Inglês, e a Temporada 2019–20 registrando a sua 62ª
+        presença na primeira divisão, o 18º clube que mais pontou em todas as edições, o 10º que mais disputou a Premier
+        League, ao longo dos anos os adeptos começaram a ter alcunha the hammers(🔨)</p>
+    <section>
+        <div>
+            <p style="color: rgb(0, 0, 0);">Olimpic of London</p>
+            <a> {% load static %} <img src="{% static "website/img/west-ham-stadium.png" %}" alt="westHam"
+                                       style="width:800px; height:400px"></a>
+
+
+        </div>
+
+    </section>
+    <section id="titulos">
+        <p style="color: white;">Os títulos mais importantes ganhos até ao momento.</p>
+    </section>
+    <section id="tabela">
+        <style>
+            table, th, td {
+                border: 1px solid rgb(255, 255, 255);
+            }
+
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="1">Competições</th>
+                <th colspan="1" rowspan="3">Títulos</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td> 0x</td>
+            </tr>
+            <tr>
+                <td>UEFA Europa League</td>
+                <td> 0x</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Premier League</td>
+                <td>0x</td>
+            </tr>
+
+            <tr>
+                <td>FA Cup</td>
+                <td>3x</td>
+
+
+            </tfoot>
+        </table>
+
+    </section>
+{% endblock main %}
