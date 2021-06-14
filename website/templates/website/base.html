@@ -7,7 +7,6 @@
     <meta name="keywords" content="soccerNET">
     <meta name="description" content="Website sobre futebol">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'website/img/soccer_site.ico' %}" type="image/x-icon">
     <link rel='stylesheet' href="{% static 'website/css/font.css' %}">
     <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
@@ -32,8 +31,11 @@
     <nav class="topnav">
 
         <a id="left1" href="{% url 'website:index' %}">Página Inicial</a>
-
-        <a id="right1" href="{% url 'website:login' %}">Login</a>
+        {% if not request.user.is_authenticated %}
+            <a id="right1" href="{% url 'website:login' %}">Login</a>
+        {% else %}
+            <a id="right1" href="{% url 'website:logout' %}">Logout</a>
+        {% endif %}
         <a id="right1" href="{% url 'website:info' %}">Contactos</a>
         <a id="right1" href="{% url 'website:critica' %}">Opinião</a>
         <a id="left1" href="{% url 'website:wordcloud' %}">Wordcloud</a>

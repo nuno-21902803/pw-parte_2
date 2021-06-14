@@ -10,7 +10,6 @@
     <h3>Para poder deixar uma crítica à nossa página tem de preencher todos os parâmetros abaixo apresentados</h3>
 
     <section>
-
         <form action="" method="POST" autocomplete="on">
             {% csrf_token %}
             {{ form.as_p }}
@@ -23,8 +22,9 @@
                           placeholder="⚠️ Atenção: A crítica que vai fazer, tem de ser construtiva e tem de ter bases, no qual se baseou para a escrever, para que num futuro possamos melhorar o site. Obrigado."></textarea>
 
                 <br><br>
-
-                <input type="submit" value="Submeter Dados">
+                {% if request.user.is_authenticated %}
+                    <input type="submit" value="Submeter Dados">
+                {% endif %}
             </fieldset>
         </form>
 

@@ -52,17 +52,6 @@ def chelsea_view(request):
     return render(request, "website/chelsea.html")
 
 
-def critica_view(request):
-    form = UserDForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return HttpResponseRedirect(reverse('website:index'))
-
-    context = {'form': form}
-
-    return render(request, 'website/critica.html', context)
-
-
 def crystal_palace_view(request):
     return render(request, "website/Crystal-Palace.html")
 
@@ -80,11 +69,7 @@ def hiberian_view(request):
 
 
 def info_view(request):
-
-    if not request.user.is_authenticated:
-        return HttpResponseRedirect(reverse('website:login'))
-    else:
-        return render(request, "website/info.html")
+    return render(request, "website/info.html")
 
 
 def login_view(request):
@@ -126,11 +111,20 @@ def apaga_user_view(request, user_id):
     return HttpResponseRedirect(reverse('website:index'))
 
 
+def critica_view(request):
+    form = UserDForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('website:index'))
+
+    context = {'form': form}
+
+    return render(request, 'website/critica.html', context)
+
+
 def logout_view(request):
     logout(request)
-    return render(request, 'website/login.html', {
-        "message": "Saiu."
-    })
+    return render(request, 'website/index.html')
 
 
 def leeds_view(request):
