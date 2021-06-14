@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.urls import reverse
 
+from .models import User_details
+from .forms import UserDForm
 
 def quizz_view(request):
     return render(request, "website/quizz.html")
@@ -51,7 +53,14 @@ def chelsea_view(request):
 
 
 def critica_view(request):
-    return render(request, "website/critica.html")
+    form = UserDForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('website:index'))
+
+    context = {'form': form}
+
+    return render(request, 'website/critica.html', context)
 
 
 def crystal_palace_view(request):
@@ -98,6 +107,23 @@ def login_view(request):
             })
 
     return render(request, 'website/login.html')
+
+
+def edita_user_view(request, user_id):
+    user_d = User_details.objects.get(id=user_id)
+    form = UserDForm(request.POST or None, instance=user_d)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('website:index'))
+
+    context = {'form': form, 'user_id': user_id}
+    return render(request, 'website/edita.html', context)
+
+
+def apaga_user_view(request, user_id):
+    User_details.objects.get(id=user_id).delete()
+    return HttpResponseRedirect(reverse('website:index'))
 
 
 def logout_view(request):

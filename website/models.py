@@ -2,10 +2,10 @@ from django.db import models
 
 
 class User_details(models.Model):
-    id = models.CharField(max_length=5, primary_key=True)
     name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
-    phone = models.CharField(max_length=9)
+    email = models.CharField(max_length=50)
+    phone = models.IntegerField(default=0)
     date_Of_Birth = models.DateField()
 
     def __str__(self):
