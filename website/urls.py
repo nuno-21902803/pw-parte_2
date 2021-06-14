@@ -40,4 +40,7 @@ urlpatterns = [
     path('wolves/', views.wolves_view, name='wolves'),
     path('wordcloud/', views.wordcloud_view, name='wordcloud'),
     path('brigton/', views.brighton_view, name='brighton'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('quizz/', views.quizz_view, name='quizz'),
 ]

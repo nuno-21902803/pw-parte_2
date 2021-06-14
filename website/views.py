@@ -1,6 +1,13 @@
 #  config/views.py
-from django.http import HttpResponse
+from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.urls import reverse
+
+
+def quizz_view(request):
+    return render(request, "website/quizz.html")
 
 
 def index_page_view(request):
@@ -64,7 +71,40 @@ def hiberian_view(request):
 
 
 def info_view(request):
-    return render(request, "website/info.html")
+
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('website:login'))
+    else:
+        return render(request, "website/info.html")
+
+
+def login_view(request):
+
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(
+                    request,
+                    username=username,
+                    password=password
+        )
+
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect(reverse('website:index'))
+        else:
+            return render(request, 'website/login.html', {
+                "message": 'Credenciais inválidas.'
+            })
+
+    return render(request, 'website/login.html')
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'website/login.html', {
+        "message": "Saiu."
+    })
 
 
 def leeds_view(request):

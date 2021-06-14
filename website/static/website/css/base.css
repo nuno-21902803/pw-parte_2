@@ -12,6 +12,11 @@ body > article {
 }
  */
 /* FORMATACAO */
+
+.quadro-quizz{
+  background-image: url("../img/quadro-tatico.png");
+}
+
 * {
   box-sizing: border-box;
 }

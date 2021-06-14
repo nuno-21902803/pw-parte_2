@@ -1,0 +1,25 @@
+{% extends 'website/base.html' %}
+
+        {% block nome %}
+            <h1 id="titulo_site">Login</h1>
+        {% endblock nome %}
+
+{% block main %}
+
+    <h2>Faça o seu login:</h2>
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+    <form action= "{% url 'website:login' %}" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+
+        <br>
+        <input type="submit" value="Login">
+
+
+    </form>
+{% endblock main %}
