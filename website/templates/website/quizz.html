@@ -8,32 +8,23 @@
     <body class="quadro-quizz">
     <h2>Algumas perguntas sobre Futebol:</h2>
     <br>
-    <form oninput="x0.value=parseInt(vol0.value)">
+    //#ver os links do stor, criar funcao save que tem bue ifs por pergunta e dps se o if der true eu gravo o objeto quizz tipo form = quizz(request), form.save().
+    <form method="/search/" oninput="x0.value=parseInt(vol0.value)">
         <fieldset>
-            <legend>Identificação:</legend>
-
-            <p>Nome: <input id="nameID" type="text" name="nome" placeholder="Insira nome" autofocus required></p>
-            <p>Apelido: <input id="subnameID" type="text" name="apelido" placeholder="Insira apelido"></p>
-            <p>Email: <input id="emailID" type="text" name="email" placeholder="Insira email" required></p>
-
-            <input type="submit" value="Submeter Dados">
-            <hr>
-
-
             <label id="pergunta1"> Qual foi o melhor marcador de todos os tempos da Premier League?</label><br>
 
-            <label type="resposta1" id="reposta1"> Alan Shearer</label>
+            <label type="resposta1_1" id="reposta1"> Alan Shearer</label>
             <input type="radio" id="txt" name="pois" value="txt"/><br>
-            <label type="resposta2" id="resposta2"> Wayne Rooney</label>
+            <label type="resposta1_1" id="resposta2"> Wayne Rooney</label>
             <input type="radio" id="txt1" name="pois" value="txt1"/><br>
-            <label type="resposta3" id="resposta3"> Sergio Agüero</label>
+            <label type="resposta1_1" id="resposta3"> Sergio Agüero</label>
             <input type="radio" id="txt2" name="pois" value="txt2"/><br>
 
 
             <p></p>
             <label for="pergunta2" id="pergunta4"> Quem foi o treinador(es) a ganhar mais títulos na Premier
                 League?</label><br>
-            <label type="resposta5" id="resposta5"> Sir Alex Ferguson</label>
+            <label type="resposta " id="resposta5"> Sir Alex Ferguson</label>
             <input type="checkbox" id="txt3" name="ola" value="txt3"/><br>
             <label type="resposta6" id="resposta6"> Arsene Wenger</label>
             <input type="checkbox" id="txt4" name="ola1" value="txt4"/><br>

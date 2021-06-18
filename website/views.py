@@ -69,7 +69,8 @@ def hiberian_view(request):
 
 
 def info_view(request):
-    return render(request, "website/info.html")
+    context = {'users_details': User_details.objects.all()}
+    return render(request, "website/info.html", context)
 
 
 def login_view(request):

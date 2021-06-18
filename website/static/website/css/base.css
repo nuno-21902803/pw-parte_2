@@ -10,6 +10,12 @@ body > article {
     max-width: 800px;
     margin: auto;
 }
+
+                    {% for user in users %}
+                    <a href="{% url 'website:edita' userD_id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px">
+                        Editar
+                    </a>
+                    {% endfor %}
  */
 /* FORMATACAO */
 

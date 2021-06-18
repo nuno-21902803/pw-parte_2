@@ -53,6 +53,11 @@
 
     <p hidden>Nao temos contas ainda para fazer referencias, mas em breve poderá ser possível</p>
 
-
-
+    {% for user in users_details %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'website:edita' user.id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px">
+                    Editar utilizador - {{ user.name }}
+            </a>
+        {% endif %}
+    {% endfor %}
 {% endblock main %}

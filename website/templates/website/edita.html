@@ -7,14 +7,17 @@
 {% endblock nome %}
 
 {% block main %}
-<h3>Tarefa</h3>
+
+<h3>Contacto</h3>
     <form action="{% url 'website:edita' user_id %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
 
         <a href="{% url 'website:index' %}" role="button" class="btn btn-warning">Cancelar</a>
         <input type="submit" value="Gravar" class="btn btn-success" >
-        <a href="{% url 'website:apaga' tarefa_id %}" role="button" class="btn btn-danger">Apagar</a>
+        <a href="{% url 'website:apaga' user_id %}" role="button" class="btn btn-danger">Apagar</a>
+
+
     </form>
 
 {% endblock %}
