@@ -43,6 +43,7 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('quizz/', views.quizz_view, name='quizz'),
+    path('spa/', views.spa_view, name='spa'),
     path('edita/<int:user_id>', views.edita_user_view, name='edita'),
     path('apaga/<int:user_id>', views.apaga_user_view, name='apaga'),
 ]

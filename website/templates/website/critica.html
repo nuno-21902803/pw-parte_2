@@ -16,23 +16,9 @@
             <fieldset style="border-color: black;">
                 <legend>Preencha os seguintes campos:</legend>
 
-
-                <label for="critica"></label>
-                <textarea rows="5" cols="60"
-                          placeholder="⚠️ Atenção: A crítica que vai fazer, tem de ser construtiva e tem de ter bases, no qual se baseou para a escrever, para que num futuro possamos melhorar o site. Obrigado."></textarea>
-
-                <br><br>
-
-                <p style="color: #bbccde">De 0-10 quão certa é que acha que a informação do site é?
-                    <input type="range" id="vol0" name="vol0" min="0" max="10">
-                    <output name="x0" for="vol0"></output>
-                    <br>
-                </p>
-
-                <p style="color: #bbccde">De 0-10 qual a probabilidade de recomendar o site a um amigo seu?
-                    <input type="range" id="vol1" name="vol1" min="0" max="10">
-                    <br>
-                </p>
+                <div id="opinion_text">
+                    {{ formOp.as_p}}
+                </div>
                 <input type="submit" value="Submeter Dados">
 
             </fieldset>

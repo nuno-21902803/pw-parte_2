@@ -40,3 +40,13 @@ class User_Quizz(models.Model):
 
     def __str__(self):
         return f"{self.name} {self.last_name} and {self.quizzes}"
+
+
+class User_Opinion(models.Model):
+    id_user = models.IntegerField(default=0)
+    opinion_text = models.CharField(max_length=300)
+    opinion2 = models.IntegerField(default=0)
+    opinion3 = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"Opiniao do user {self.id_user} : {self.opinion_text} : {self.opinion2} : {self.opinion3}"

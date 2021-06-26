@@ -5,8 +5,8 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.urls import reverse
 
-from .models import User_details
-from .forms import UserDForm
+from .models import User_details, User_Opinion, User_Quizz
+from .forms import UserDForm, UserOpinionForm
 
 def quizz_view(request):
     return render(request, "website/quizz.html")
@@ -114,11 +114,17 @@ def apaga_user_view(request, user_id):
 
 def critica_view(request):
     form = UserDForm(request.POST or None)
+    formOpinion = UserOpinionForm(request.POST or None)
     if form.is_valid():
         form.save()
         return HttpResponseRedirect(reverse('website:index'))
 
-    context = {'form': form}
+    if formOpinion.is_valid():
+        formOpinion.id_user = request.user.id
+        formOpinion.save()
+        return HttpResponseRedirect(reverse('website:index'))
+
+    context = {'form': form, 'formOp': formOpinion}
 
     return render(request, 'website/critica.html', context)
 
@@ -134,6 +140,10 @@ def leeds_view(request):
 
 def leicester_view(request):
     return render(request, "website/leicester.html")
+
+
+def spa_view(request):
+    return render(request, "website/spa.html")
 
 
 def links_view(request):

@@ -23,6 +23,10 @@ body > article {
   background-image: url("../img/quadro-tatico.png");
 }
 
+#opinion_text{
+color : white;
+}
+
 * {
   box-sizing: border-box;
 }

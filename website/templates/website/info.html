@@ -44,6 +44,12 @@
 {% endblock nome %}
 
 {% block main %}
+    {% if not request.user.is_authenticated %}
+        <script>
+            alert('Para editar contactos tem que fazer login!')
+        </script>
+    {% endif %}
+
     <h2>Algumas formas de nos contactarem:</h2>
 
     <p class="fa fa-twitter"></p>
