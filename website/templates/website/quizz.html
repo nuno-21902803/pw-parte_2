@@ -2,9 +2,9 @@
 
 {% block style_head %}
     <style>
-    footer{
-        color: black;
-    }
+        footer {
+            color: black;
+        }
     </style>
 {% endblock style_head %}
 
@@ -17,20 +17,20 @@
     <h2>Algumas perguntas sobre Futebol:</h2>
     <br>
 
-       {% if request.user.is_authenticated %}
-            <form action="" method="POST" autocomplete="on">
-                {% csrf_token %}
+    {% if request.user.is_authenticated %}
+        <form action="" method="POST" autocomplete="on">
+            {% csrf_token %}
 
-                {{ form.as_p }}
+            {{ form.as_p }}
 
 
-                <input type="submit" value="Submeter Quizz">
-                <br>
-                <br>
-            </form>
-       {% else %}
-           <p style="font-size: 20px ; color: black;"><b>Tem de fazer login para fazer o quizz.</b></p>
-       {% endif %}
+            <input type="submit" value="Submeter Quizz">
+            <br>
+            <br>
+        </form>
+    {% else %}
+        <p style="font-size: 20px ; color: black;"><b>Tem de fazer login para fazer o quizz.</b></p>
+    {% endif %}
     </body>
 {% endblock main %}
 

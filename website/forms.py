@@ -40,7 +40,9 @@ class UserOpinionForm(ModelForm):
         # inserção de classes CSS para formatação de cada campo do formulário
         widgets = {
             'opinion_text': forms.TextInput(attrs={'class': 'form-control',
-                                                   'placeholder': '⚠️ Atenção: A crítica que vai fazer, tem de ser construtiva e tem de ter bases, no qual se baseou para a escrever, para que num futuro possamos melhorar o site. Obrigado.'}),
+                                                   'placeholder': '⚠️ Atenção: A crítica '
+                                                                  'que vai fazer, tem de ser '
+                                                                  'construtiva. Obrigado.'}),
             'opinion2': forms.NumberInput(attrs={'type': 'range', 'step': '1', 'max': 10}),
             'opinion3': forms.NumberInput(attrs={'type': 'range', 'step': '1', 'max': 10}),
         }

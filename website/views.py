@@ -11,6 +11,7 @@ from .models import User_details, Quizz
 def quizz_view(request):
     formQuizz = QuizzForm(request.POST or None)
     formQuizz.user_id = request.user.id
+    #pontuacao = 0 -> fazer ifs para as respostas e somar se a resposta for igual dps criar uma pagina que motra a pontuacao
     if formQuizz.is_valid():
         formQuizz.save()
         return HttpResponseRedirect(reverse('website:index'))
