@@ -2,8 +2,25 @@
 
 {% block style_head %}
 
+    <style>
+        div {
+            display: none;
+        }
 
-    <script src="../../javascript/spa.js"></script>
+        button {
+            background-color: #4CAF50; /* Green */
+            border-bottom-color: #0a6dee;
+            border-top-color: #006b1b;
+            border-left-color: #00363a;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: black;
+            display: inline-block;
+            font-size: 22px;
+        }
+    </style>
+    <script src="../../static/website/javascript/spa.js"></script>
 {% endblock style_head %}
 
 {% block nome %}
@@ -13,18 +30,34 @@
 
 {% block main %}
 
-    <h1>Bem vindo à Single Page</h1>
-    <button data-page="page1">Page 1</button>
-    <button data-page="page2">Page 2</button>
-    <button data-page="page3">Page 3</button>
+    <h1>Bem vindo à nossa Single Page</h1>
+    <br>
+    <button data-page="page1">Melhor jogador do Mundo</button>
+    <button data-page="page2">Estádio mais bonito do Mundo</button>
+    <button data-page="page3">Melhor golo de sempre</button>
 
     <div id="page1">
-        <h1>This is page 1</h1>
+        <h1>Melhor jogador do Mundo</h1>
+        <p style="color: white; font-size: 18px">
+            Recordista nato e despreza apresentações, apenas o melhor da história. <span style="font-size: 30px">G.O.A.T 🐐</span></p>
+        <a> {% load static %} <img src="{% static "website/img/ronaldo.png" %}" alt="ronaldo"
+                                   style="width:800px; height:400px"></a>
     </div>
     <div id="page2">
-        <h1>This is page 2</h1>
+        <h1>Estádio mais bonito do Mundo</h1>
+        <p style="color: white; font-size: 18px">
+            Estádio do melhor e mais bonito clube de Portugal e do Mundo, Sport Lisboa e Benfica.</p>
+        <a> {% load static %} <img src="{% static "website/img/benfica-stadium.png" %}" alt="Slb"
+                                   style="width:800px; height:400px"></a>
     </div>
     <div id="page3">
-        <h1>This is page 3</h1>
+        <h1>Melhor golo de sempre</h1>
+        <p style="color: white; font-size: 18px">
+            Bicycle Kick de Cristiano Ronaldo contra a Juventus num jogo a contar para a Champions League.</p>
+        <a> {% load static %} <img src="{% static "website/img/ronaldo-bicycle-kick-goal-real-madrid.png" %}"
+                                   alt="ronaldo_kick"
+                                   style="width:800px; height:400px"></a>
+
+
     </div>
 {% endblock main %}

@@ -1,5 +1,13 @@
 {% extends 'website/base.html' %}
 
+{% block style_head %}
+    <style>
+    footer{
+        color: black;
+    }
+    </style>
+{% endblock style_head %}
+
 {% block nome %}
     <h1 id="titulo_site">Quizz</h1>
 {% endblock nome %}
@@ -8,113 +16,21 @@
     <body class="quadro-quizz">
     <h2>Algumas perguntas sobre Futebol:</h2>
     <br>
-    //#ver os links do stor, criar funcao save que tem bue ifs por pergunta e dps se o if der true eu gravo o objeto quizz tipo form = quizz(request), form.save().
-    <form method="/search/" oninput="x0.value=parseInt(vol0.value)">
-        <fieldset>
-            <label id="pergunta1"> Qual foi o melhor marcador de todos os tempos da Premier League?</label><br>
 
-            <label type="resposta1_1" id="reposta1"> Alan Shearer</label>
-            <input type="radio" id="txt" name="pois" value="txt"/><br>
-            <label type="resposta1_1" id="resposta2"> Wayne Rooney</label>
-            <input type="radio" id="txt1" name="pois" value="txt1"/><br>
-            <label type="resposta1_1" id="resposta3"> Sergio Agüero</label>
-            <input type="radio" id="txt2" name="pois" value="txt2"/><br>
+       {% if request.user.is_authenticated %}
+            <form action="" method="POST" autocomplete="on">
+                {% csrf_token %}
+
+                {{ form.as_p }}
 
 
-            <p></p>
-            <label for="pergunta2" id="pergunta4"> Quem foi o treinador(es) a ganhar mais títulos na Premier
-                League?</label><br>
-            <label type="resposta " id="resposta5"> Sir Alex Ferguson</label>
-            <input type="checkbox" id="txt3" name="ola" value="txt3"/><br>
-            <label type="resposta6" id="resposta6"> Arsene Wenger</label>
-            <input type="checkbox" id="txt4" name="ola1" value="txt4"/><br>
-            <label type="resposta7" id="resposta7"> José Mourinho</label>
-            <input type="checkbox" id="txt5" name="ola2" value="txt5"/><br>
-            <p></p>
-
-
-            <label id="pergunta3"> Qual foi o jogador que jogo mais partidas na história da Premier League?</label><br>
-            <label type="resposta13" id="resposta13"> Gareth Barry</label>
-            <input type="radio" id="txt" name="pois" value="txt"/><br>
-            <label type="resposta11" id="resposta11"> Frank Lampard</label>
-            <input type="radio" id="txt1" name="pois" value="txt1"/><br>
-            <label type="resposta12" id="resposta12"> Ryan Giggs</label>
-            <input type="radio" id="txt2" name="pois" value="txt2"/><br><br>
-
-
-            <p class="pergunta5">Qual o clube Escocês com mais titulos na Scottish Premier League?
-                <input type="resposta13" name="dataAnswer2">
-            </p>
-            <p></p>
-            <div>
-                <p class="pergunta4"> Que clubes atuaram na Premier League na temporada 2020/2021:
-                    <input type="checkbox" name="checkboxAns0" value="Wolves">
-                    <label for="Wolves"> Wolverhampton |</label>
-                    <input type="checkbox" name="checkboxAns1" value="Norwich">
-                    <label for="Norwich"> Norwich City | </label>
-                    <input type="checkbox" name="checkboxAns2" value="Watford">
-                    <label for="Watford"> Watford Football Club |</label>
-                    <input type="checkbox" name="checkboxAns0" value="Huddersfield">
-                    <label for="Huddersfield"> Huddersfield Town</label>
-                </p>
-            </div>
-
-            <label for="pergunta6" id="pergunta6"> Qual foi o melhor marcador de todos os tempos da Scottish Premier
-                League?</label><br>
-            <label type="resposta8" id="reposta8"> Kris Boyd</label>
-            <input type="radio" id="txt" name="pois" value="txt"/><br>
-            <label type="resposta9" id="resposta9"> Henrik Larsson</label>
-            <input type="radio" id="txt1" name="pois" value="txt1"/><br>
-            <label type="resposta10" id="resposta10"> Scott McDonald</label>
-            <input type="radio" id="txt2" name="pois" value="txt2"/><br>
-
-            <p></p>
-
-
-            <label for="pertgunta7" id> Ao serviço do Man United, quantas bolas de hora ganhou o Ronaldo?:</label><br>
-            <label for="vol"> Penso que ganhou (entre 0 e 5) Bolas de ouro ao serviço do Man United:</label>
-            <input type="range" id="vol0" name="vol0" min="0" max="5">
-            <output name="x0" for="vol0"></output>
-            <p></p>
-
-
-            <label id="pergunta8"> Qual foi é o o jogador com mais titulos ganhos na Premier League?</label><br>
-            <label type="resposta14" id="resposta14">Gary Neville</label>
-            <input type="radio" id="txt" name="pois" value="txt"/><br>
-            <label type="resposta15" id="resposta15">Paul Scholes</label>
-            <input type="radio" id="txt1" name="pois" value="txt1"/><br>
-            <label type="resposta16" id="resposta16">Ryan Giggs</label>
-            <input type="radio" id="txt2" name="pois" value="txt2"/><br>
-
-
-            <p></p>
-            <label for="pergunta9" id="pergunta9">Quais destes clubes nunca desceram de divisao na Premier
-                League?</label><br>
-            <label type="resposta17" id="resposta17">Chelsea</label>
-            <input type="checkbox" id="txt3" name="ola" value="txt3"/><br>
-            <label type="resposta18" id="resposta18">Manchester City</label>
-            <input type="checkbox" id="txt4" name="ola1" value="txt4"/><br>
-            <label type="resposta19" id="resposta19">Manchester United</label>
-            <input type="checkbox" id="txt5" name="ola2" value="txt5"/><br>
-            <label type="resposta20" id="resposta20">Everton</label>
-            <input type="checkbox" id="txt5" name="ola2" value="txt5"/><br>
-            <p></p>
-
-
-            <label id="pergunta10"> Qual destes clubes ganhou mais titulos na Scottish Premier League?</label><br>
-            <label type="resposta21" id="resposta21">Celtic</label>
-            <input type="radio" id="txt" name="pois" value="txt"/><br>
-            <label type="resposta22" id="resposta22">Rangers</label>
-            <input type="radio" id="txt1" name="pois" value="txt1"/><br>
-            <label type="resposta23" id="resposta23"> Aberdeen</label>
-            <input type="radio" id="txt2" name="pois" value="txt2"/><br>
-
-
-            <p></p>
-
-            <input type="submit" value="Submeter Quizz">
-            <p></p>
-        </fieldset>
-    </form>
+                <input type="submit" value="Submeter Quizz">
+                <br>
+                <br>
+            </form>
+       {% else %}
+           <p style="font-size: 20px ; color: black;"><b>Tem de fazer login para fazer o quizz.</b></p>
+       {% endif %}
     </body>
 {% endblock main %}
+

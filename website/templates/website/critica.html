@@ -13,17 +13,22 @@
         <form action="" method="POST" autocomplete="on">
             {% csrf_token %}
             {{ form.as_p }}
+            <input type="submit" value="Submeter Dados">
+        </form>
+
+        <br>
+        <form action="" method="POST" autocomplete="on">
             <fieldset style="border-color: black;">
                 <legend>Preencha os seguintes campos:</legend>
 
                 <div id="opinion_text">
+                    {% csrf_token %}
                     {{ formOp.as_p}}
                 </div>
-                <input type="submit" value="Submeter Dados">
+                <input type="submit" value="Submeter Opinião">
 
             </fieldset>
         </form>
-
     <br>
     <br>
     </section>

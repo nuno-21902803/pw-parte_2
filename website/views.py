@@ -2,14 +2,22 @@
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from django.contrib.auth.models import User
 from django.urls import reverse
 
-from .models import User_details, User_Opinion, User_Quizz
-from .forms import UserDForm, UserOpinionForm
+from .forms import UserDForm, UserOpinionForm, QuizzForm
+from .models import User_details, Quizz
+
 
 def quizz_view(request):
-    return render(request, "website/quizz.html")
+    formQuizz = QuizzForm(request.POST or None)
+    formQuizz.user_id = request.user.id
+    if formQuizz.is_valid():
+        formQuizz.save()
+        return HttpResponseRedirect(reverse('website:index'))
+
+    context = {'form': formQuizz, 'users_details': User_details.objects.all()}
+
+    return render(request, 'website/quizz.html', context)
 
 
 def index_page_view(request):

@@ -1,23 +1,15 @@
 /* base.css */
-/*
-footer {
-   position: fixed;
-   bottom: 30px;
-   width: 100%;
-   text-align: center;
-}
-body > article {
-    max-width: 800px;
-    margin: auto;
-}
-
-                    {% for user in users %}
-                    <a href="{% url 'website:edita' userD_id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px">
-                        Editar
-                    </a>
-                    {% endfor %}
- */
 /* FORMATACAO */
+
+body{
+
+  font-family: 'Akaya Telivigala', serif;
+  font-size: 17px;
+  background-image:url('../img/background-site-pic.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
 
 .quadro-quizz{
   background-image: url("../img/quadro-tatico.png");
@@ -30,22 +22,11 @@ color : white;
 * {
   box-sizing: border-box;
 }
+
 #bg {
   background-repeat: no-repeat;
 
 }
-body{
-
-  font-family: 'Akaya Telivigala', serif;
-  font-size: 17px;
-  background-image:url('../img/background-site-pic.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-
-}
-
-
-
 
 header {
   padding: 10px;

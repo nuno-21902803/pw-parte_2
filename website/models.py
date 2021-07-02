@@ -1,4 +1,3 @@
-
 from django.db import models
 
 
@@ -6,25 +5,25 @@ class User_details(models.Model):
     name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
     email = models.CharField(max_length=50, default="xxx@soccernet.pt")
-    date_Of_Birth = models.CharField(max_length=50, default="18/05/2001")
-    phone = models.IntegerField(default=0)
+    date_Of_Birth = models.CharField(max_length=50, default="")
+    phone = models.IntegerField(default=999000999)
 
     def __str__(self):
         return f"{self.id} <-> ({self.name}) - mail {self.email} with phone {self.phone} and born in {self.date_Of_Birth}"
 
 
 class Quizz(models.Model):
-    user_id = models.ForeignKey(User_details, on_delete=models.CASCADE, related_name="id_user_quizz")
+    user_id = models.IntegerField(default=1)
     question1 = models.CharField(max_length=20, default="answ1")
     question2 = models.CharField(max_length=20, default="answ2")
     question3 = models.CharField(max_length=20, default="answ3")
     question4 = models.CharField(max_length=20, default="answ4")
     question5 = models.CharField(max_length=20, default="answ5")
     question6 = models.CharField(max_length=20, default="answ6")
-    question7 = models.CharField(max_length=20, default="answ7")
+    question7 = models.IntegerField(default=0)
     question8 = models.CharField(max_length=20, default="answ8")
     question9 = models.CharField(max_length=20, default="answ9")
-    question10 = models.CharField(max_length=20, default="answ10")
+    question10 = models.CharField(max_length=20, default="")
 
     def __str__(self):
         return f"{self.id} <-> {self.user_id}"
