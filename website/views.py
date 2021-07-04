@@ -11,6 +11,7 @@ from .models import User_details, Quizz
 def quizz_view(request):
     formQuizz = QuizzForm(request.POST or None)
     formQuizz.user_id = request.user.id
+    pontos = 0
     #pontuacao = 0 -> fazer ifs para as respostas e somar se a resposta for igual dps criar uma pagina que motra a pontuacao
     if formQuizz.is_valid():
         formQuizz.save()
@@ -27,6 +28,10 @@ def index_page_view(request):
 
 def liga_escocesa_view(request):
     return render(request, "website/ligaEscocesa.html")
+
+
+def mapaWeb_view(request):
+    return render(request, "website/mapaweb.html")
 
 
 def aberdeen_view(request):

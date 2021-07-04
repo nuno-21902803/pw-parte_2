@@ -1,0 +1,21 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block nome %}
+            <h1 id="titulo_site">Mapa do Website</h1>
+        {% endblock nome %}
+
+{% block main %}
+
+    <h2>Veja o nosso mapa do Website</h2>
+
+    <section>
+
+        <figure>
+            <a><img src="{% static "website/img/mapaWeb.png" %}" style="width:2000px; height:800px" alt=""></a>
+        </figure>
+
+    <br>
+    <br>
+    </section>
+{% endblock main %}
